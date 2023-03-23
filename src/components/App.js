@@ -8,7 +8,7 @@ import CalcButton from './CalcButton';
 
 import reducer from '../reducers'
 import { initialState } from '../reducers';
-import { applyNumber, applyOperation, applyClear } from '../actions';
+import { applyNumber, applyOperation, applyClear, applyMemory } from '../actions';
 
 function App() {
 
@@ -33,9 +33,9 @@ function App() {
             </div>
             
             <div className="row">
-              <CalcButton value={"M+"}/>
-              <CalcButton value={"MR"}/>
-              <CalcButton value={"MC"}/>
+              <CalcButton value={"M+"} onClick={(e) => dispatch(applyMemory(e.target.value))}/>
+              <CalcButton value={"MR"} onClick={(e) => dispatch(applyMemory(e.target.value))}/>
+              <CalcButton value={"MC"} onClick={(e) => dispatch(applyMemory(e.target.value))}/>
             </div>
 
             <div className="row">
