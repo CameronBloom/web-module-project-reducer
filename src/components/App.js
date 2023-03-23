@@ -8,7 +8,7 @@ import CalcButton from './CalcButton';
 
 import reducer from '../reducers'
 import { initialState } from '../reducers';
-import { applyNumber, applyOperation } from '../actions';
+import { applyNumber, applyOperation, applyClear } from '../actions';
 
 function App() {
 
@@ -63,7 +63,7 @@ function App() {
             </div>
 
             <div className="row ce_button">
-              <CalcButton value={"CE"}/>
+              <CalcButton value={"CE"} onClick={(e) => dispatch(applyClear())}/>
             </div>
 
           </form>
