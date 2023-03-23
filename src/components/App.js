@@ -1,11 +1,20 @@
 import React from 'react';
+import { useReducer } from 'react';
 
 import './App.css';
 
 import TotalDisplay from './TotalDisplay';
 import CalcButton from './CalcButton';
 
+import reducer from '../reducers'
+import { initialState } from '../reducers';
+
 function App() {
+
+  // implement useReducer with exports from our "reducers" folder
+  const [state, dispatch] = useReducer(reducer, initialState)
+  // confirm state is being set to initialState values
+  console.log(state);
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
