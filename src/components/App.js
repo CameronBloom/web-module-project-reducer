@@ -8,7 +8,7 @@ import CalcButton from './CalcButton';
 
 import reducer from '../reducers'
 import { initialState } from '../reducers';
-import { addOne } from '../actions';
+import { applyNumber } from '../actions';
 
 function App() {
 
@@ -39,21 +39,21 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={1} onClick={() => dispatch(addOne())}/>
-              <CalcButton value={2}/>
-              <CalcButton value={3}/>
+              <CalcButton value={1} onClick={(e) => dispatch(applyNumber(Number(e.target.value)))}/>
+              <CalcButton value={2} onClick={(e) => dispatch(applyNumber(Number(e.target.value)))}/>
+              <CalcButton value={3} onClick={(e) => dispatch(applyNumber(Number(e.target.value)))}/>
             </div>
 
             <div className="row">
-              <CalcButton value={4}/>
-              <CalcButton value={5}/>
-              <CalcButton value={6}/>
+              <CalcButton value={4} onClick={(e) => dispatch(applyNumber(Number(e.target.value)))}/>
+              <CalcButton value={5} onClick={(e) => dispatch(applyNumber(Number(e.target.value)))}/>
+              <CalcButton value={6} onClick={(e) => dispatch(applyNumber(Number(e.target.value)))}/>
             </div>
 
             <div className="row">
-              <CalcButton value={7}/>
-              <CalcButton value={8}/>
-              <CalcButton value={9}/>
+              <CalcButton value={7} onClick={(e) => dispatch(applyNumber(Number(e.target.value)))}/>
+              <CalcButton value={8} onClick={(e) => dispatch(applyNumber(Number(e.target.value)))}/>
+              <CalcButton value={9} onClick={(e) => dispatch(applyNumber(Number(e.target.value)))}/>
             </div>
 
             <div className="row">
